@@ -1,33 +1,29 @@
 {
-  "name": "biblicalblueprints.org",
-  "private": true,
-  "version": "1.0.0",
-  "description": "",
-  "scripts": {
-    "build:htaccess": "node generator/generate-htaccess.js",
-    "build:html": "node generate-static-html.js",
-    "build": "npm run build:htaccess && npm run build:html",
-    "watch": "watch 'npm run build:html' components generator pages",
-    "serve": "live-server public",
-    "dev": "npm-run-all build --parallel watch serve"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+ssh://git@github.com/KayserCommentaryOrg/biblicalblueprints.org.git"
-  },
-  "author": "TehShrike",
-  "license": "UNLICENSED",
-  "bugs": {
-    "url": "https://github.com/KayserCommentaryOrg/biblicalblueprints.org/issues"
-  },
-  "homepage": "https://github.com/KayserCommentaryOrg/biblicalblueprints.org#readme",
-  "dependencies": {
-    "param-case": "^3.0.4",
-    "svelte": "^3.50.0"
-  },
-  "devDependencies": {
-    "live-server": "^1.2.2",
-    "npm-run-all": "^4.1.5",
-    "watch": "^1.0.2"
-  }
+	"name": "dom-in",
+	"version": "0.0.1",
+	"private": true,
+	"scripts": {
+		"dev": "vite dev",
+		"build": "vite build",
+		"preview": "vite preview",
+		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
+		"lint": "eslint ."
+	},
+	"devDependencies": {
+		"@sveltejs/adapter-auto": "^3.0.0",
+		"@sveltejs/adapter-cloudflare": "^4.7.0",
+		"@sveltejs/kit": "^2.0.0",
+		"@sveltejs/vite-plugin-svelte": "^3.1.1",
+		"@types/eslint": "^9.6.0",
+		"eslint": "^9.0.0",
+		"eslint-plugin-svelte": "^2.36.0",
+		"globals": "^15.0.0",
+		"svelte": "^4.2.7",
+		"svelte-check": "^3.6.0",
+		"typescript": "^5.0.0",
+		"typescript-eslint": "^8.0.0-alpha.20",
+		"vite": "^5.0.3"
+	},
+	"type": "module"
 }
